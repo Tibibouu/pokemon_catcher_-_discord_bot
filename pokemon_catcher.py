@@ -3,17 +3,23 @@ import os
 import requests
 
 load_dotenv()
-DISCORD_TOKEN = os.getenv('DISCORD_TOKEN')
+
 DISCORD_CHANNEL_ID = os.getenv('DISCORD_CHANNEL_ID')
+
+# Token array
+dToken = [os.getenv('DISCORD_TOKEN_1'), os.getenv('DISCORD_TOKEN_2')]
+
 
 MESSAGE = ";pokemon"
 
-payload = {
-    'content' : MESSAGE
-}
+# Send message to all channels
+for i in range(dToken.__len__()):
+    payload = {
+        'content' : MESSAGE
+    }
 
-header = {
-    'authorization' : DISCORD_TOKEN
-}
+    header = {
+        'authorization' : dToken[i]
+    }
 
-r = requests.post(f'https://discord.com/api/v9/channels/{DISCORD_CHANNEL_ID}/messages', data=payload, headers=header)
+    r = requests.post(f'https://discord.com/api/v9/channels/{DISCORD_CHANNEL_ID}/messages', data=payload, headers=header)

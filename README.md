@@ -51,7 +51,8 @@ This is a python script that sends a message to a discord channel to catch a pok
       DISCORD_TOKEN = <your_discord_token>
       DISCORD_CHANNEL_ID = <your_discord_channel_id>
       ```
-      - *DISCORD_TOKEN* : You can get it on the browser Discord app by pressing F12, going to the *Network* tab, send a message in a channel and copy the *Authorization* key in the *Request Headers* section of the message request.
+      - *DISCORD_TOKEN* : You can get it on the browser Discord app by pressing F12, going to the *Network* tab, send a message in a channel and copy the *Authorization* key in the *Request Headers* section of the message request.</br>
+      :warning: *Do it in a private browser and don't log out from Discord! The window can be closed.*
       - *DISCORD_CHANNEL_ID* : The id of the channel where you want to send the message. You can get it by activating the *Developer Mode* in the *Advanced* section of the *Appearance* tab in the *User Settings*.
 
 **Now, you are able to run the script.**
